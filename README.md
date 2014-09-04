@@ -3,7 +3,7 @@
 <body>
 <h3>What is SwarmCon ?</h3>
 
-SwarmCon is a minimalistic version of the WhyCon localization system intended for swarm applications.
+SwarmCon is a minimalistic version of the <a href="http://www.youtube.com/watch?v=KgKrN8_EmUA">WhyCon</a> localization system intended for swarm applications.
 While the core of the SwarmCon system is the same as the WhyCon one, it was designed to have as least dependencies as possible.
 Moreover, the SwarmCon is especially intended for external localization of ground-robot swarms.
 Thus, unlike WhyCon, SwarmCon can distinguish between individual robots and calculate their heading.
