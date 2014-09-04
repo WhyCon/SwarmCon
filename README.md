@@ -8,6 +8,10 @@ While the core of the SwarmCon system is the same as the WhyCon one, it was desi
 Moreover, the SwarmCon is especially intended for external localization of ground-robot swarms.
 Thus, unlike WhyCon, SwarmCon can distinguish between individual robots and calculate their heading.
 
+WhyCon was first presented on ICRA2013 conference and later in the JINT journal.
+If you use this software for your publication it is mandatory to cite WhyCon using the references in the provided cite.bib file. 
+Full URL to this file is: https://raw.github.com/lrse/whycon/master/cite.bib.
+
 <h3>To use it</h3>
 
 To start with the software:
