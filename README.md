@@ -1,12 +1,12 @@
 <html>
 <head/>
 <body>
-<h3>What is WhyCon-Mini ?</h3>
+<h3>What is SwarmCon ?</h3>
 
 SwarmCon is a minimalistic version of the WhyCon localization system intended for swarm applications.
-While the core of the WhyCon-Mini system is the same as the WhyCon one, it was designed to have as least dependencies as possible.
-The SwarmCon is especially intended for external localization of ground-robot swarms.
-Unlike WhyCon, SwarmCon can distinguish between individual robots and calculate their heading.
+While the core of the SwarmCon system is the same as the WhyCon one, it was designed to have as least dependencies as possible.
+Moreover, the SwarmCon is especially intended for external localization of ground-robot swarms.
+Thus, unlike WhyCon, SwarmCon can distinguish between individual robots and calculate their heading.
 
 <h3>To use it</h3>
 
