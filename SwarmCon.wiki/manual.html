@@ -1,0 +1,57 @@
+<html>
+<head/>
+<body>
+<h3>What is WhyCon-Mini ?</h3>
+
+WhyCon-Mini is a minimalistic version of the WhyCon localization system.
+While the core of the WhyCon-Mini system is the same as the WhyCon one, it was designed to have as least dependencies as possible.
+Therefore, WhyCon-Mini is especially suitable for embedded applications and demonstration purposes.
+
+<h3>To use it</h3>
+
+To start with the software:
+<ol>
+<li>Install the <a href="#libraries">SDL libraries</a>.</li>
+<li>Download the software from GitHub and go to the <b>src</b> directory.</li>
+<li>Adjust the camera resolution in the <b>main/whycon.cpp</b>.</li>
+<li>Compile the software - just type <b>make</b>.</li>
+<li>Print one circular <a href="pattern.pdf">pattern</a>.</li>
+<li>Try a test run - you need to run the binary from the <b>bin</b> directory. Type <b>./whycon /dev/videoX</b>, where X is the number of the camera.</li> 
+<li>You should see the image with some numbers below the circle. Pressing <b>D</b> shows the segmentation result.</li>
+<li>Open your browser to view localhost:6666. You should see the circle position.</li>
+</ol>
+
+To setup a coordinate system :
+<ol>
+<li>Calibrate your camera using the MATLAB (or Octave) calibration toolbox and put the <b>Calib_result.m</b> in the <b>etc</b> directory.</li>
+<li>Adjust the circle diameter in the <b>main/whycon.cpp</b>, (default diameter is 122 mm) and you should get real pattern position in meters.</li>
+<li>Print another four circular <a href="pattern.pdf">patterns</a> to use them to define the global coordinate system.</li>
+<li>Put them on positions [0,0], [x,0], [y,0] and [x,y] of the coordinate system you want to use.</li> 
+<li>Adjust the x,y values from the previous point in the <b>main/whycon.cpp</b> and recompile.</li> 
+<li>Run the software, press <b>r</b> and click the four patterns.</li>
+<li>The positions of the detected patterns are now transformed in the global coordinate system given by the four circles.</li>
+<li>You can press <b>1</b>,<b>2</b>,<b>3</b> to switch between local camera 3D coordinates, 2D and 3D localization.</li>
+</ol>
+
+To proceed further :
+
+<ol>
+<li>Pressing <b>h</b> displays help.</li>
+<li>The values from the last calibration are automagically loaded at the start of the system.</li>
+<li>Running the system with as <b>./whycon /dev/videoM N</b> causes the method to search for <b>N</b> patterns with the M<sup>th</sup> camera.</li> 
+<li>Pressing <b>+</b>,<b>-</b> changes the number of localized patterns.</li>
+<li>Clicking a mouse to a particular position causes the system to start tracking from this point.</li>
+</ol>
+
+<hr>
+<h4>Dependencies</h4><a NAME="libraries"></a>
+
+All the following libraries are probably in your packages.
+
+<ul>
+<li><b>libSDL-1.2</b> for graphical user interface.</li>
+<li><b>libSDL_ttf-2.0</b> to print stuff in the GUI</li>
+</ul>
+
+</body>
+</html>
