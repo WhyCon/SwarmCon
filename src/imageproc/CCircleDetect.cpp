@@ -211,7 +211,7 @@ int CCircleDetect::loadCircleID(const char* id)
 	FILE* idFile = fopen(id,"r");
 	int dummy = 0;
 	numberIDs=0;
-	if (id == NULL)
+	if (idFile == NULL)
 	{
 		fprintf(stderr,"ID file not found\n");
 		return -2;
